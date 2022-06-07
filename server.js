@@ -16,6 +16,9 @@ const flash = require("connect-flash");
 // express init.
 const app = express();
 
+// body parser
+app.use(express.urlencoded({extended: true}));
+
 // static file storage location (./public)
 app.use(express.static("public"));
 
@@ -55,10 +58,13 @@ app.use(function(req, res, next){
 
 // Import routes
 const indexRouter = require("./routes/index");
+const authRouter = require("./routes/auth");
+
 
 
 // Mount routes
 app.use("/", indexRouter);
+app.use("/", authRouter);
 
 
 // listen to port with callback function
