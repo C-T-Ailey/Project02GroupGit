@@ -1,23 +1,29 @@
-// Passport dependency
+// Requiring passport
 const passport = require("passport");
 
-// passport-local strategy dependency
+
+// Requiring passport-local strategy
 const LocalStrategy = require("passport-local").Strategy;
 
-// User schema dependency
 const User = require("../models/User");
 
-// Serialize the user
-passport.serializeUser(function(user,done){
+// Serialize user
+// Saving the data into the session
+// We can save any information into session
+// ID is a unique identifier
+passport.serializeUser(function(user, done){
     done(null, user.id)
-});
+})
 
-// Deserialize user and read info from DB according to user id
+
+// Deserialize user
+// Reading the information from the DB according to the user ID
 passport.deserializeUser(function(id, done){
-    User.findByID(id,function(err, user){
+    User.findById(id, function(err, user){
         done(err, user);
     })
 })
+
 
 passport.use(new LocalStrategy(
     {
@@ -25,13 +31,15 @@ passport.use(new LocalStrategy(
         passwordField: "password"
     },
     function(emailAddress, password, done) {
-        User.findOne({ emailAddress: emailAddress }, function(err, user) {
-            if (err) { return done(err); }
-            if (!user) {return done(null, false); }
-            if (!user.verifyPassword(password)) { return done(null, false); }
-            return done(null, user);
-        });
+      User.findOne({ emailAddress: emailAddress }, function (err, user) {
+        if (err) { return done(err); }
+        if (!user) { return done(null, false); }
+        if (!user.verifyPassword(password)) { return done(null, false); }
+        return done(null, user);
+      });
     }
-));
+  ));
+
+
 
 module.exports = passport;

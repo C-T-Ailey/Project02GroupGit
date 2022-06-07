@@ -10,13 +10,23 @@
 
 </head>
 <body>
+    <nav>
+        <div>
+            <% if(currentUser) { %>
+                Welcome, <%= currentUser.firstName %>! ||
+                <a href="/auth/logout">Log Out</a>
+                <% }else{ %>
+                    <a href="/auth/signup" class="unstyled">Sign Up</a> || <a href="/auth/login" class="unstyled">Log In</a>
+                <% } %>
+        </div>
+    </nav>
 
     <div><h1><a href="/" class="nostyle">Book v2</a></h1></div>
     <br>
     <hr>
 
     <%- body %>
-    
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src=../public/js/main.js></script>
 </body>

@@ -1,29 +1,31 @@
-// APIs for user registration/authentication
+// APIs for User Registration and Authentication
 
-const User = require("../models/User")
+const User = require("../models/User");
 
-// bcrypt dependency
+// Require bCrypt
 const bcrypt = require("bcrypt");
 const salt = 10;
 
 // require ppConfig.js
 const passport = require("../helper/ppConfig");
 
-// HTTP GET - Sign up form
+// HTTP GET - Sign up route - to load the signup form
 
 exports.auth_signup_get = (req,res) => {
     res.render("auth/signup");
 }
 
-// HTTP POST - Sign up post/save to DB
+// HTTP POST - Sign up route - to post/save data
 
 exports.auth_signup_post = (req, res) => {
-    let user = new User(req.body)
-    console.log(req.body.password)
-    let hashedPw = bcrypt.hashSync(req.body.password, salt);
-    console.log(hashedPw)
+    let user = new User(req.body);
 
-    user.password = hashedPw
+    console.log(req.body.password)
+    // Hash the PW
+    let hashedPassword = bcrypt.hashSync(req.body.password, salt);
+    console.log(hashedPassword);
+
+    user.password = hashedPassword;
 
     user.save()
     .then(()=>{
@@ -31,17 +33,18 @@ exports.auth_signup_post = (req, res) => {
     })
     .catch((err) => {
         console.log(err);
-        res.send("Try again later.");
+        res.send("Try again later :(");
     })
+
 }
 
-// Http GET - log in route for login form
+// HTTP GET - log in route - to load the login form
 
 exports.auth_login_get = (req, res) => {
     res.render("auth/login");
 }
 
-// HTTP POST - log in route to post/authenticate data
+// HTTP POST - log in route - to post/authenticate data
 
 exports.auth_login_post =
     passport.authenticate("local", {
