@@ -13,7 +13,8 @@
     <nav>
         <div>
             <% if(currentUser) { %>
-                Welcome, <%= currentUser.firstName %>! ||
+                Welcome, <a href ="/auth/profile"><%= currentUser.firstName %></a>! ||
+                <a href ="/auth/profile"></a>
                 <a href="/auth/logout">Log Out</a>
                 <% }else{ %>
                     <a href="/auth/signup" class="unstyled">Sign Up</a> || <a href="/auth/login" class="unstyled">Log In</a>

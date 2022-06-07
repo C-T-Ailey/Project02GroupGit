@@ -64,3 +64,10 @@ exports.auth_logout_get = (req, res) => {
     req.flash("success", "You have successfully logged out.")
     res.redirect('/auth/login');
 }
+
+// GET - profile menu
+
+exports.auth_profile_get = (req, res) => {
+    console.log("profile");
+    res.render("auth/profile");
+}
