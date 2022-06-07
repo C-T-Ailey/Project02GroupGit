@@ -29,8 +29,7 @@ const PORT = process.env.PORT;
 let session = require ("express-session");
 
 // passport dependency
-let passport = require("./helper/ppConfig.js");
-const { init } = require("express/lib/application");
+let passport = require("./helper/ppConfig");
 
 // enable flash messages to be used by the app
 app.use(flash());
@@ -55,18 +54,18 @@ app.use(function(req, res, next){
 })
 
 // Import routes
-
+const indexRouter = require("./routes/index");
 
 
 // Mount routes
-
+app.use("/", indexRouter);
 
 
 // listen to port with callback function
 app.listen(PORT, () => console.log(`Running on port ${PORT}.`))
 
 // set node.js to look for EJS files in the Views folder
-app.set("view-engine", "ejs");
+app.set("view engine", "ejs");
 
 // MongoDB connection
 mongoose.connect(process.env.mongoDBURL,
