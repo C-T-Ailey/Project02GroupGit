@@ -1,0 +1,24 @@
+<h2> Edit Author Details </h2>
+
+<form method="POST" action="/author/update?_method=PUT">
+
+    <div>
+        <label>Name</label>
+        <input type="text" name="name" value="<%= author.name %>"/>
+    </div>
+
+    <div>
+        <label>Nationality</label>
+        <input type="text" name="nationality" value="<%= author.nationality %>">
+    </div>
+
+    <div>
+        <label>Birth Year</label>
+        <input type="number" name="birthYear" value="<%= author.birthYear %>"/>
+    </div>
+
+    <input type="hidden" name="id" value="<%= author._id %>">
+
+    <button type="submit">Update Author</button>
+
+</form>
