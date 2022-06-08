@@ -5,6 +5,7 @@ const bookSchema = mongoose.Schema({
     yearPublished: Number,
     reviewTitle: String,
     reviewBody: String,
+    imageUrl: String,
     authors: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Author"

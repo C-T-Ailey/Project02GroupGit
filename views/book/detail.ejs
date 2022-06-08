@@ -1,5 +1,8 @@
 <h2><%= book.title %></h2>
 
+Cover:
+<img src="<%= book.imageUrl %>" alt="<%= book.title %> cover">
+
 <% book.authors.forEach(function(author){ %>
     <hr>
     <% console.log("book/detail.ejs", author.name) %>

@@ -9,8 +9,8 @@
 
     <div>
         <label>Author(s)</label>
-        <select type="text" name="authors[]" multiple="multiple">
-            <%  authors.forEach(function(author){ %>
+        <select type="text" name="authors" multiple="multiple">
+            <%  book.authors.forEach(function(author){ %>
                 <option value="<%= author._id %>"><%= author.name %></option>
             <% }) %>
         </select>
@@ -19,6 +19,11 @@
     <div>
         <label>Year Published</label>
         <input type="number" name="yearPublished" value="<%= book.yearPublished %>"/>
+    </div>
+
+    <div>
+        <label>Cover Image URL</label>
+        <input type="url" name="imageUrl" value="<%= book.imageUrl %>">
     </div>
 
     <input type="hidden" name="id" value="<%= book._id %>">
