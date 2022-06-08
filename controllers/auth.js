@@ -89,10 +89,10 @@ exports.auth_edit_get = (req, res) => {
 // PUT - Profile Update
 
 exports.auth_update_put = (req, res) => {
-    console.log(req.body.id)
+    console.log("body request: auth update", req.body.id)
     User.findByIdAndUpdate(req.body.id, req.body)
     .then(() => {
-        res.redirect("/auth/profile");
+        res.redirect("/auth/profile")
     })
     .catch(err => {
         console.log(err)
