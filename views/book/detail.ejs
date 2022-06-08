@@ -14,10 +14,6 @@ Cover:
     Year Published: <%= book.yearPublished %>
 </div>
 
-<div>
-    <h3><%= book.reviewTitle%></h3>
-    <p><%= book.reviewBody %></p>
-</div>
 
 <div>
     Entry Added: <%= moment(book.createdAt).fromNow() %>
@@ -25,4 +21,16 @@ Cover:
 
 <div>
     Entry Updated: <%= moment(book.updatedAt).fromNow() %>
+</div>
+
+<br>
+
+<div>
+<h3>What other Nomads have to say about this title...</h3>
+</div>
+<br>
+
+<div>
+    <h3><%= book.reviewTitle%></h3>
+    <p><%= book.reviewBody %></p>
 </div>
