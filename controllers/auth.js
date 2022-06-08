@@ -8,6 +8,7 @@ const salt = 10;
 
 // require ppConfig.js
 const passport = require("../helper/ppConfig");
+const { Author } = require("../models/Author");
 
 // HTTP GET - Sign up route - to load the signup form
 
@@ -70,4 +71,30 @@ exports.auth_logout_get = (req, res) => {
 exports.auth_profile_get = (req, res) => {
     console.log("profile");
     res.render("auth/profile");
+}
+
+// GET - Edit Profile form
+
+exports.auth_edit_get = (req, res) => {
+
+    User.findById(req.query.id)
+    .then((user) => {
+        res.render("auth/edit", {user})
+    })
+    .catch(err => {
+        console.log(err)
+    })
+}
+
+// PUT - Profile Update
+
+exports.auth_update_put = (req, res) => {
+    console.log(req.body.id)
+    User.findByIdAndUpdate(req.body.id, req.body)
+    .then(() => {
+        res.redirect("/auth/profile");
+    })
+    .catch(err => {
+        console.log(err)
+    })
 }

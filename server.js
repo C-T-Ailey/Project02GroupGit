@@ -59,12 +59,16 @@ app.use(function(req, res, next){
 // Import routes
 const indexRouter = require("./routes/index");
 const authRouter = require("./routes/auth");
+const authorRouter = require("./routes/authors");
+const bookRouter = require("./routes/books")
 
 
 
 // Mount routes
 app.use("/", indexRouter);
 app.use("/", authRouter);
+app.use("/", authorRouter);
+app.use("/", bookRouter);
 
 
 // listen to port with callback function

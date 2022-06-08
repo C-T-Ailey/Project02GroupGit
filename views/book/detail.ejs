@@ -1,0 +1,25 @@
+<h2><%= book.title %></h2>
+
+<% book.author.forEach(function(author){ %>
+    <hr>
+    <% console.log("book/detail.ejs", author.name) %>
+    <div>Author(s): <%= author.name %> </div>
+<% }) %>
+<hr>
+
+<div>
+    Year Published: <%= book.yearPublished %>
+</div>
+
+<div>
+    <h3><%= book.reviewTitle%></h3>
+    <p><%= book.reviewBody %></p>
+</div>
+
+<div>
+    Entry Added: <%= moment(book.createdAt).fromNow() %>
+</div>
+
+<div>
+    Entry Updated: <%= moment(book.updatedAt).fromNow() %>
+</div>
