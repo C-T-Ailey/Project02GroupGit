@@ -1,0 +1,26 @@
+.banner-text {
+    width: 800px;
+    color: white;
+    font-size: 35px;
+    font-family: "Roboto Mono", monospace;
+    word-break: break-word;
+    margin-top: 10%;
+}
+.containers {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+.banners {
+    height: 150px;
+    padding: 40px;
+    border-radius: 8px;
+}
+a {
+    text-decoration: none;
+}

@@ -1,29 +1,31 @@
-<h1>Create a New Account</h1>
-
+<link href="../css/signup.css" rel="stylesheet"/>
 <form method="POST" action="/auth/signup">
+    <div id="banner">
+        <center>
+            <div id="container">
+                <div>
+                    <h4>First Name</h4>
+                    <input type="text" name="firstName"/>
+                </div>
+                <div>
+                    <h4>Last Name</h4>
+                    <input type="text" name="lastName"/>
+                </div>
+                <div>
+                    <h4>Email Address:</h4>
+                    <input type="email" name="emailAddress"/>
+                </div>
 
-    <div>
-        <label>First Name:</label>
-        <input type="text" name="firstName"/>
+                <div>
+                    <h4 id="password">Password:</h4>
+                    <input type="password" name="password"/>
+                </div>
+
+                <div>
+                    <button type="submit">Sign Up</button>
+                </div>
+            </div>
+        </center>
+        <a href="../auth/login">Already have an account? Log in</a>
     </div>
-
-    <div>
-        <label>Last Name:</label>
-        <input type="text" name="lastName"/>
-    </div>
-
-    <div>
-        <label>Email Address:</label>
-        <input type="email" name="emailAddress"/>
-    </div>
-
-    <div>
-        <label>Password:</label>
-        <input type="password" name="password"/>
-    </div>
-
-    <div>
-        <button type="submit">Sign Up</button>
-    </div>
-
 </form>

@@ -1,13 +1,23 @@
-<h1>Log In</h1>
-
+<link href="../css/login.css" rel="stylesheet"/>
 <form method="POST" action="/auth/login">
-
-    <div>
-        <label>Email Address:</label>
+<div id="banner">
+    <center><div id="container"><div>
+        <h4>Email Address:</h4>
         <input type="email" name="emailAddress"/>
     </div>
 
     <div>
+<<<<<<< HEAD
+        <h4 id="password">Password:</h4>
+        <input type="password" name="password"/>
+    </div>
+
+    <div>
+        <button type="submit">Log In</button>
+    </div></div></center>
+    <a href="../auth/signup">Don't have an account? Sign up</a>
+</div>
+=======
         <label>Password:</label>
         <input type="password" name="password"/>
     </div>
@@ -18,4 +28,5 @@
         <button type="submit">Log In</button>
     </div>
 
+>>>>>>> 551885f5916751e9f70e5b7165688ba3b7b2a92e
 </form>
