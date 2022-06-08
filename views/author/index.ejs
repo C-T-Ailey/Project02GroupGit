@@ -24,7 +24,9 @@
         <td><%= author.book.length %></td>
         <td>
             <% author.book.forEach(function(book){ %>
-            <li> <%= book.title %></li>
+            <li> 
+                <ul><%= book.title %></ul>
+            </li>
             <% }) %>
         </td>
         <td><%= moment(author.createdAt).fromNow() %></td>
