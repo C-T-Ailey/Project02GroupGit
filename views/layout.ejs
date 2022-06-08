@@ -13,11 +13,26 @@
 </div>
 <nav>
     <div>
-        <a href="/book/index" class="unstyled">The Bookshelf</a> || <a href="/book/add" class="unstyled">Add to the Bookshelf</a>
-        || <a href="/author/index" class="unstyled">Lookup by Author</a> || <a href="/author/add" class="unstyled">Add an Author</a>
+        <% if(currentUser) { %>
+            <a href="/book/index">The Bookshelf</a> |
+            <a href="/author/index">Lookup by Author</a> |
+            <a href="/book/add">Add to the Bookshelf</a> |
+            <a href="/author/add">Add an Author</a>
+
+        <% }else{ %>
+            <a href="/book/index" class="unstyled">The Bookshelf</a> |
+                <a href="/author/index" class="unstyled">Lookup by Author</a>
+        <% } %>
     </div>
 </nav>
 <%- body %>
+<footer style="width: 100%">
+    <% if(currentUser) { %>
+        <div style="float: right;">
+            <a href="/auth/logout">Log Out</a>
+        </div>
+    <% } %>
+</footer>
 <script src="../js/script.js"></script>
 </body>
 </html>
