@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(155, 131, 182);
+    margin: 10px
+}
+
+.unstyled {
+    text-decoration: underline;
+    color:black
+}

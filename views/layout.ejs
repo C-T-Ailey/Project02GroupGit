@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Nomad's Bookshelf</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <nav>
+        <div>
+            <% if(currentUser) { %>
+                Welcome, <a href ="/auth/profile"><%= currentUser.firstName %></a>! ||
+                <a href ="/auth/profile"></a>
+                <a href="/auth/logout">Log Out</a>
+                <% }else{ %>
+                    <a href="/auth/signup" class="unstyled">Sign Up</a> || <a href="/auth/login" class="unstyled">Log In</a>
+                <% } %>
+        </div>
+    </nav>
+
+    <div><h1><a href="/" class="nostyle">The Nomad's Bookshelf</a></h1></div>
+    <br>
+    
+    <div>
+        <a href="/book/index" class="unstyled">The Bookshelf</a> || <a href="/book/add" class="unstyled">Add to the Bookshelf</a>
+        || <a href="/author/index" class="unstyled">Lookup by Author</a> || <a href="/author/add" class="unstyled">Add an Author</a>
+    </div>
+    <hr>
+
+    <%- body %>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src=../public/js/main.js></script>
+</body>
+</html>
