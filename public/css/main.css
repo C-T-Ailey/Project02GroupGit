@@ -94,3 +94,15 @@ nav {
 .banner-cont {
     justify-content: flex-start;
 }
+a, nav {
+    background: none;
+    color: white;
+    text-decoration: none;
+}
+nav {
+    width: 100%;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

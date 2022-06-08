@@ -40,7 +40,8 @@ h4, button {
 input , button {
     border-radius: 10px;
 }
-a {
+#signup {
    margin-left: 48%;
     margin-top: 11%;
+    color: rgba(255, 255, 255, 0.3);
 }

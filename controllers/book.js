@@ -55,7 +55,6 @@ exports.book_index_get = (req, res) => {
 // HTTP GET - specific book by ID
 exports.book_show_get = (req, res) => {
     console.log("book_show_get req id", req.query.id);
-
     Book.findById(req.query.id).populate("author")
     .then(book => {
         res.render("book/detail", {book, moment});

@@ -17,7 +17,9 @@
         <td><a href="/book/detail?id=<%= book._id %>" class="unstyled"><%= book.title %></a></td>
         <td>
             <% book.author.forEach(function(author){ %>
-            <li> <%= author.name %></li>
+            <li>
+                <ul><%= book.author.name %></ul>
+            </li>
             <% }) %>
         </td>
         <td><%= book.yearPublished %></td>

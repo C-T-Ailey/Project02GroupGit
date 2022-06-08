@@ -9,9 +9,30 @@
 </head>
 <body>
 <div class="banner-cont">
-    <center><span class="typed" style="font-size: 100px;"> </span></center>
+    <span class="typed" style="font-size: 100px;"> </span>
+</div>
+<nav>
+    <div>
+        <% if(currentUser) { %>
+            <a href="/book/index">The Bookshelf</a> |
+            <a href="/author/index">Lookup by Author</a> |
+            <a href="/book/add">Add to the Bookshelf</a> |
+            <a href="/author/add">Add an Author</a>
+
+        <% }else{ %>
+            <a href="/book/index" class="unstyled">The Bookshelf</a> |
+                <a href="/author/index" class="unstyled">Lookup by Author</a>
+        <% } %>
     </div>
+</nav>
 <%- body %>
+<footer style="width: 100%">
+    <% if(currentUser) { %>
+        <div style="float: right;">
+            <a href="/auth/logout">Log Out</a>
+        </div>
+    <% } %>
+</footer>
 <script src="../js/script.js"></script>
 </body>
 </html>
