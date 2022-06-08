@@ -1,1 +1,18 @@
-<h2>Profile</h2>
+<div>
+    <h2><%= currentUser.firstName %>'s Profile</h2>
+</div>
+
+<div>
+    Name: <%= currentUser.firstName + " " + currentUser.lastName %>
+    <br>
+</div>
+
+<div>
+    Registered Email Address: <%= currentUser.emailAddress %>
+    <br>
+</div>
+
+<div>
+    <a href="/auth/edit">Update Profile</a>
+    <br>
+</div>

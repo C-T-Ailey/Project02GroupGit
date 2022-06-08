@@ -14,8 +14,8 @@ router.get("/book/add", isLoggedIn, bookCtrl.book_create_get);
 router.post("/book/add", bookCtrl.book_create_post);
 router.get("/book/index", bookCtrl.book_index_get);
 router.get("/book/detail", bookCtrl.book_show_get);
-router.get("/book/delete", bookCtrl.book_delete_get);
-router.get("/book/edit", bookCtrl.book_edit_get);
+router.get("/book/delete", isLoggedIn, bookCtrl.book_delete_get);
+router.get("/book/edit", isLoggedIn, bookCtrl.book_edit_get);
 router.put("/book/update", bookCtrl.book_update_put);
 
 
