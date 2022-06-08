@@ -16,11 +16,13 @@
     <tr>
         <td><a href="/book/detail?id=<%= book._id %>" class="unstyled"><%= book.title %></a></td>
         <td>
-            <% book.author.forEach(function(author){ %>
+            <% book.authors.forEach(function(author){ %>
+            <% console.log("book/index.ejs", author.name) %>
             <li>
-                <ul><%= book.author.name %></ul>
+                <%= author.name %>
             </li>
             <% }) %>
+
         </td>
         <td><%= book.yearPublished %></td>
         <td><%= moment(book.createdAt).fromNow() %></td>
