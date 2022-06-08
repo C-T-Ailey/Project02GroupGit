@@ -14,7 +14,7 @@
 
     <div>
         <label>Registered Email Address</label>
-        <input type="number" name="emailAddress" value="<%= currentUser.emailAddress %>"/>
+        <input type="text" name="emailAddress" value="<%= currentUser.emailAddress %>"/>
     </div>
 
     <div>
@@ -22,7 +22,7 @@
         <input type="password" name="password" value="<%= currentUser.password %>"/>
     </div>
 
-    <input type="hidden" name="id" value="<%= author._id %>">
+    <input type="hidden" name="id" value="<%= currentUser._id %>">
 
     <button type="submit">Update Profile</button>
 
