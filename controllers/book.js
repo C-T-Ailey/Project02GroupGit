@@ -43,7 +43,7 @@ exports.book_create_post = (req, res) => {
 
 // HTTP GET - Bookshelf index - load all books
 exports.book_index_get = (req, res) => {
-    Book.find().populate("author")
+    Book.find().populate("authors")
     .then(books => {
         res.render("book/index", {books, moment})
     })
@@ -55,7 +55,7 @@ exports.book_index_get = (req, res) => {
 // HTTP GET - specific book by ID
 exports.book_show_get = (req, res) => {
     console.log("book_show_get req id", req.query.id);
-    Book.findById(req.query.id).populate("author")
+    Book.findById(req.query.id).populate("authors")
     .then(book => {
         res.render("book/detail", {book, moment});
     })
@@ -79,7 +79,7 @@ exports.book_delete_get = (req, res) => {
 // HTTP GET - Load book edit form
 exports.book_edit_get = (req, res) => {
 
-    Book.findById(req.query.id).populate("author")
+    Book.findById(req.query.id)
     .then((book) => {
         res.render("book/edit", {book})
     })

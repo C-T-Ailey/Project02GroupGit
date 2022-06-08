@@ -28,7 +28,7 @@ exports.author_create_post = (req, res) => {
     })
 }
 
-// HTTP GET - Bookshelf index - load all books
+// HTTP GET - Author index - load all authors
 exports.author_index_get = (req, res) => {
     Author.find().populate("book")
     .then(authors => {
