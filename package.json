@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "sudo nodemon server.js"
+    "test": "sudo nodemon server.js",
+    "start": "nodemon server.js"
   },
   "author": "Chris Ailey and Bedros Asdourian",
   "license": "ISC",

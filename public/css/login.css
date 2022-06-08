@@ -1,0 +1,46 @@
+#banner {
+    display: flex;
+    flex-direction: column;
+    background-color: #313131;
+    border-radius: 8px;
+    height: 350px;
+    width: 400px;
+    margin-top: 10%;
+}
+button {
+    align-items: flex-end;
+    width: 170px;
+    height: 30px;
+    margin-top: 50px;
+    background-color: green;
+    font-weight: bolder;
+    cursor: pointer;
+}
+button:hover {
+    cursor: pointer;
+}
+#container {
+    margin-top: 15%;
+}
+#password {
+    margin-top: 8%;
+}
+input {
+    width: 300px;
+    height: 30px;
+    padding: 5px;
+    font-weight: bolder;
+}
+h4 {
+    font-size: 17.5px;
+}
+h4, button {
+    color: white;
+}
+input , button {
+    border-radius: 10px;
+}
+a {
+   margin-left: 48%;
+    margin-top: 11%;
+}
