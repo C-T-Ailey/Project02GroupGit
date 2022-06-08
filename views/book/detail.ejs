@@ -1,6 +1,6 @@
 <h2><%= book.title %></h2>
 
-<% book.author.forEach(function(author){ %>
+<% book.authors.forEach(function(author){ %>
     <hr>
     <% console.log("book/detail.ejs", author.name) %>
     <div>Author(s): <%= author.name %> </div>

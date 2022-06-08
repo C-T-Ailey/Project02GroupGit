@@ -9,8 +9,8 @@
 
     <div>
         <label>Author(s)</label>
-        <select type="text" name="author[]" multiple="multiple">
-            <%  book.author.forEach(function(author){ %>
+        <select type="text" name="authors[]" multiple="multiple">
+            <%  authors.forEach(function(author){ %>
                 <option value="<%= author._id %>"><%= author.name %></option>
             <% }) %>
         </select>
