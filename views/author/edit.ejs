@@ -1,19 +1,20 @@
 <h2> Edit Author Details </h2>
-
+<link href="../css/author-edit.css" rel="stylesheet"/>
 <form method="POST" action="/author/update?_method=PUT">
-
+<div id="banner">
+   <center> <div id="container">
     <div>
-        <label>Name</label>
+        <h4 id="name">Name</h4>
         <input type="text" name="name" value="<%= author.name %>"/>
     </div>
 
     <div>
-        <label>Nationality</label>
+        <h4 id="password">Nationality</h4>
         <input type="text" name="nationality" value="<%= author.nationality %>">
     </div>
 
     <div>
-        <label>Birth Year</label>
+        <h4>Birth Year</h4>
         <input type="number" name="birthYear" value="<%= author.birthYear %>"/>
     </div>
 
@@ -21,6 +22,6 @@
 
     <input type="hidden" name="id" value="<%= author._id %>">
 
-    <button type="submit">Update Author</button>
-
+    <button type="submit" style="background-color: chocolate">Update Author</button></div></center>
+    </div>
 </form>
