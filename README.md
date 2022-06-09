@@ -11,6 +11,7 @@
 ### Unresolved Issues
 * Profile updating and password change systems are non-functional.
 * The select box in the /author/edit form only displays the authors already attributed to that book, instead of the full list.
+* Flash messages don't work and I have no idea why.
 
 ### Potential Future Additions
 * A button which allows the user to alternate between a Light and Dark colour theme for the site.
