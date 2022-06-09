@@ -9,8 +9,7 @@
 * [The Nomad Bookshelf](https://nomadbooks.herokuapp.com/)
 
 ### Unresolved Issues
-* Profile updating and password change systems are non-functional.
-* The select box in the /author/edit form only displays the authors already attributed to that book, instead of the full list.
+* The select box in the /author/edit form only displays the authors already attributed to that book, instead of the full list. Removing authors also doesn't seem to work.
 * Flash messages don't work and I have no idea why.
 
 ### Potential Future Additions
