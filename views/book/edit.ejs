@@ -1,14 +1,15 @@
 <h2> Edit Book Details </h2>
-
+<link href="../css/book-edit.css" rel="stylesheet"/>
 <form method="POST" action="/book/update?_method=PUT">
-
+<div id="banner">
+    <center><div id="container">
     <div>
-        <label>Title</label>
+        <h4 id="name">Title</h4>
         <input type="text" name="title" value="<%= book.title %>"/>
     </div>
 
     <div>
-        <label>Author(s)</label>
+        <h4 id="password">Author(s)</h4>
         <select type="text" name="authors" multiple="multiple">
             <%  book.authors.forEach(function(author){ %>
                 <option value="<%= author._id %>"><%= author.name %></option>
@@ -17,12 +18,12 @@
     </div>
 
     <div>
-        <label>Year Published</label>
+        <h4>Year Published</h4>
         <input type="number" name="yearPublished" value="<%= book.yearPublished %>"/>
     </div>
 
     <div>
-        <label>Cover Image URL</label>
+        <h4>Cover Image URL</h4>
         <input type="url" name="imageUrl" value="<%= book.imageUrl %>">
     </div>
 

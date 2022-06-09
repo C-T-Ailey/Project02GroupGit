@@ -9,7 +9,7 @@
 <h2 style="color: white; margin-top: 5%"><%= book.title %></h2>
 
 <h5>Cover:</h5>
-<img src="<%= book.imageUrl %>" alt="<%= book.title %> cover">
+<a href=" <%= book.imageUrl %> "><img src="<%= book.imageUrl %>" alt="<%= book.title %> cover" style="max-height: 350px"></a>
 
 <% book.authors.forEach(function(author){ %>
     <hr>
