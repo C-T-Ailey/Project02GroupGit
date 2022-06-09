@@ -1,11 +1,15 @@
-<h3>Add an Author</h3>
-
+<link href="../../css/author-add.css" rel="stylesheet"/>
 <form method="POST" action="/author/add">
+<div id="banner">
+    <center><div id="container"><div>
+                <h4 id="name">Name :</h4>
+                <input type="text" name="name"/>
+            </div>
 
-    <div>
-        <label>Name</label>
-        <input type="text" name="name">
-    </div>
+            <div>
+                <h4 id="password">Nationality</h4>
+                <input type="text" name="nationality"/>
+            </div>
 
     <div>
         <label>Nationality</label>
@@ -23,4 +27,8 @@
 
     <button type="submit">Add author</button>
 
+            <div>
+                <button type="submit">Add Author</button>
+            </div></div></center>
+</div>
 </form>

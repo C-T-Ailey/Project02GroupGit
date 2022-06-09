@@ -1,14 +1,14 @@
-<h1>Add to the Bookshelf</h1>
 
+<link href="../../css/book-add.css" rel="stylesheet"/>
 <form method="POST" action="/book/add">
-
-    <div>
-        <label>Title</label>
+<div id="banner" style="height: 620px">
+    <center><div id="container"><div>
+        <h4>Title</h4>
         <input type="text" name="title">
     </div>
 
     <div>
-        <label>Author(s)</label>
+        <h4>Author(s)</h4>
         <select type="text" name="authors[]" multiple="multiple">
             <%  authors.forEach(function(author){ %>
                 <option value="<%= author._id %>"><%= author.name %></option>
@@ -17,27 +17,27 @@
     </div>
 
     <div>
-        <label>Year Published</label>
+        <h4>Year Published</h4>
         <input type="number" name="yearPublished">
     </div>
 
     <div>
-        <label>Book Cover URL</label>
+        <h4>Book Cover URL</h4>
         <input type="url" name="imageUrl">
     </div>
 
     <div>
-        <label>Review Title</label>
+        <h4>Review Title</h4>
         <input type="text" name="reviewTitle">
     </div>
 
     <div>
-        <label>Review</label>
+        <h4>Review</h4>
         <textarea name="reviewBody"></textarea>
     </div>
 
     <input type="hidden" name="createdBy" value="<%= currentUser._id %>">
 
     <button type="submit">Add to Bookshelf!</button>
-
+        </div></center></div>
 </form>

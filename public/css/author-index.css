@@ -1,0 +1,17 @@
+* {
+    color: white;
+}
+.header {
+    font-size: 20px;
+}
+.header {
+    padding: 10px;
+    font-weight: bolder;
+    font-style: italic;
+}
+td {
+    padding: 5px;
+}
+table {
+    margin-top: 3%;
+    }

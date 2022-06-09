@@ -1,14 +1,14 @@
-<h1>The Bookshelf</h1>
 
-<table class="table-bordered border-primary">
+<link href="../../css/book-index.css" rel="stylesheet"/>
+<table class="table-bordered border-primary table-dark table-striped">
     <tr>
-        <th>Title</th>
-        <th>Author(s)</th>
-        <th>Year Published</th>
-        <th>Entry Added</th>
-        <th>Entry Updated</th>
-        <th>Edit</th>
-        <th>Delete</th>
+        <th class="header">Title</th>
+        <th class="header">Author(s)</th>
+        <th class="header">Year Published</th>
+        <th class="header">Entry Added</th>
+        <th class="header">Entry Updated</th>
+        <th class="header">Edit</th>
+        <th class="header">Delete</th>
     </tr>
 
 <% books.forEach(function(book){ %>
@@ -27,12 +27,11 @@
         <td><%= book.yearPublished %></td>
         <td><%= moment(book.createdAt).fromNow() %></td>
         <td><%= moment(book.updatedAt).fromNow() %></td>
-        <% 
         <td>
-            <a href="/book/edit?id=<%=book.id%>" class="unstyled">Edit</a>
+            <a href="/book/edit?id=<%=book.id%>" style="color: yellow">Edit</a>
         </td>
         <td>
-            <a href="/book/delete?id=<%=book.id%>" class="unstyled">Delete</a>
+            <a href="/book/delete?id=<%=book.id%>" style="color: red">Delete</a>
         </td>
     </tr>
 

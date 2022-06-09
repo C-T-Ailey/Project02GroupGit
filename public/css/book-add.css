@@ -3,16 +3,17 @@
     flex-direction: column;
     background-color: #313131;
     border-radius: 8px;
-    height: 350px;
-    width: 400px;
-    margin-top: 10%;
+    height: 525px;
+    width: 420px;
+    margin-top: 8%;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 button {
     align-items: flex-end;
-    width: 180px;
-    height: 40px;
-    margin-top: 40px;
-    background-color: green;
+    width: 170px;
+    height: 30px;
+    background-color: magenta;
     font-weight: bolder;
     cursor: pointer;
 }
@@ -20,10 +21,9 @@ button:hover {
     cursor: pointer;
 }
 #container {
-    margin-top: 15%;
+    margin-top: 5%;
 }
 #password {
-    margin-top: 8%;
 }
 input {
     width: 300px;
@@ -40,10 +40,14 @@ h4, button {
 input , button {
     border-radius: 10px;
 }
-#signup {
-   margin-left: 44%;
-    margin-top: 8%;
-    font-size: 14px;
+input {
+    margin-bottom: 5%;
+}
+#login {
+    margin-left: 48%;
+    margin-top: 11%;
     color: rgba(255, 255, 255, 0.3);
-    text-decoration: underline;
+}
+#name {
+    margin-top: 10%;
 }
