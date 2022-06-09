@@ -9,9 +9,9 @@
 }
 button {
     align-items: flex-end;
-    width: 170px;
-    height: 30px;
-    margin-top: 50px;
+    width: 180px;
+    height: 40px;
+    margin-top: 40px;
     background-color: green;
     font-weight: bolder;
     cursor: pointer;
@@ -41,7 +41,9 @@ input , button {
     border-radius: 10px;
 }
 #signup {
-   margin-left: 48%;
-    margin-top: 11%;
+   margin-left: 44%;
+    margin-top: 8%;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.3);
+    text-decoration: underline;
 }
