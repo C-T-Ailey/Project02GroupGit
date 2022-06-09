@@ -25,7 +25,7 @@
         <td>
             <% author.book.forEach(function(book){ %>
             <li> 
-                <%= book.title %>
+                <a href="/book/detail?id=<%= book.id %>"><%= book.title %></a>
             </li>
             <% }) %>
         </td>

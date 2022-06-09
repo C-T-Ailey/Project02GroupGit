@@ -29,10 +29,11 @@
     </div></center>
 </nav>
 <%- body %>
-<footer style="width: 100%">
+<footer >
+    <p style="float: left; color: white">Copyright 2022 © Chris Ailey, Bedros Asdorian</p>
     <% if(currentUser) { %>
-        <div style="float: right;">
-            <a href="/auth/logout" style="margin-right: 3%; width: 100%; word-break: normal">Log Out</a>
+        <div >
+            <u><a href="/auth/logout" style="margin-right: 3%; width: 100%; word-break: normal; text-wrap: none">Log Out</a></u>
         </div>
     <% } %>
 </footer>
