@@ -17,7 +17,6 @@
         <td><a href="/book/detail?id=<%= book._id %>" class="unstyled"><%= book.title %></a></td>
         <td>
             <% book.authors.forEach(function(author){ %>
-            <% console.log("book/index.ejs", author.name) %>
             <li>
                 <%= author.name %>
             </li>
@@ -27,12 +26,16 @@
         <td><%= book.yearPublished %></td>
         <td><%= moment(book.createdAt).fromNow() %></td>
         <td><%= moment(book.updatedAt).fromNow() %></td>
+        <% if (currentUser) { %>
+            <% if (currentUser.id == book.createdBy) { %>
         <td>
             <a href="/book/edit?id=<%=book.id%>" style="color: yellow">Edit</a>
         </td>
         <td>
             <a href="/book/delete?id=<%=book.id%>" style="color: red">Delete</a>
         </td>
+            <% } %>
+        <% } %>
     </tr>
 
 <% }) %>
