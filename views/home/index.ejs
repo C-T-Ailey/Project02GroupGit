@@ -2,8 +2,8 @@
 <div>
     
     <% if(currentUser) { %>
-        <h2 style="color: white; text-align: center"> Recently Added </h2>
-        <div class="landingBooks">
+        <h1 style="color: white; text-align: center; margin-bottom: 0; margin-top: 15%"> Recently Added </h1>
+        <div class="landingBooks" style="margin-top: 0">
         <% books.forEach(function(book){ %>
             <div class="bookPreview">
                 <a href="/book/detail?id=<%= book.id %>""><img src="<%= book.imageUrl %>" alt="<%= book.title %> cover">
