@@ -27,7 +27,7 @@
         <td><%= book.yearPublished %></td>
         <td><%= moment(book.createdAt).fromNow() %></td>
         <td><%= moment(book.updatedAt).fromNow() %></td>
-
+        <% 
         <td>
             <a href="/book/edit?id=<%=book.id%>" class="unstyled">Edit</a>
         </td>

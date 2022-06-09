@@ -6,6 +6,7 @@ const bookSchema = mongoose.Schema({
     reviewTitle: String,
     reviewBody: String,
     imageUrl: String,
+    createdBy: String,
     authors: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Author"

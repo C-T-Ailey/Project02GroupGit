@@ -4,6 +4,7 @@ const authorSchema = mongoose.Schema({
     name: String,
     nationality: String,
     birthYear: Number,
+    createdBy: String,
     book: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Book"

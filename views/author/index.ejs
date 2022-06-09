@@ -31,8 +31,10 @@
         </td>
         <td><%= moment(author.createdAt).fromNow() %></td>
         <td><%= moment(author.updatedAt).fromNow() %></td>
+        
         <td><a href="/author/edit?id=<%= author.id %>">Edit</a></td>
         <td><a href="/author/delete?id=<%= author.id %>">Delete</a></td>
+        
     </tr>
 <% }) %>
 </table>
