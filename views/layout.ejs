@@ -10,16 +10,17 @@
     <title>TNB</title>
 </head>
 <body>
-<div class="banner-cont">
-    <center><a class="typed" href="/" style="font-size: 100px;"> </a></center>
-</div>
-<nav>
-   <center> <div>
-        <% if(currentUser) { %>
-            <a href="/book/index">The Bookshelf</a> |
-            <a href="/author/index">Lookup by Author</a> |
-            <a href="/book/add">Add to the Bookshelf</a> |
-            <a href="/author/add">Add an Author</a>
+    <div class="banner-cont">
+        <span class="typed" style="font-size: 100px;"> </span>
+    </div>
+    <nav>
+        <div>
+            <% if(currentUser) { %>
+                <a href="/book/index">The Bookshelf</a> |
+                <a href="/author/index">Lookup by Author</a> |
+                <a href="/book/add">Add to the Bookshelf</a> |
+                <a href="/author/add">Add an Author</a> |
+                <a href="/auth/profile">Profile</a>
 
         <% }else{ %>
             <a href="/book/index" >The Bookshelf</a> |

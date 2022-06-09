@@ -14,8 +14,8 @@ router.get("/author/add", isLoggedIn, authorCtrl.author_create_get);
 router.post("/author/add", authorCtrl.author_create_post);
 router.get("/author/index", authorCtrl.author_index_get);
 router.get("/author/detail", authorCtrl.author_show_get);
-router.get("/author/delete", authorCtrl.author_delete_get);
-router.get("/author/edit", authorCtrl.author_edit_get);
+router.get("/author/delete", isLoggedIn, authorCtrl.author_delete_get);
+router.get("/author/edit", isLoggedIn, authorCtrl.author_edit_get);
 router.put("/author/update", authorCtrl.author_update_put);
 
 

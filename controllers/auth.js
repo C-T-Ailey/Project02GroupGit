@@ -89,12 +89,30 @@ exports.auth_edit_get = (req, res) => {
 // PUT - Profile Update
 
 exports.auth_update_put = (req, res) => {
-    console.log("body request: auth update", req.body.id)
+
+    let user = currentUser
+
+    console.log(req.body.password)
+    // Hash the PW
+    let hashedPassword = bcrypt.hashSync(req.body.password, salt);
+    console.log(hashedPassword);
+
+    user.password = hashedPassword;
+
+    user.save()
+    .then(()=>{
+        res.redirect("/auth/profile");
+    })
+    .catch((err) => {
+        console.log(err);
+        res.send("Try again later :(");
+    })
+    /*console.log("body request: auth update", req.body.id)
     User.findByIdAndUpdate(req.body.id, req.body)
     .then(() => {
         res.redirect("/auth/profile")
     })
     .catch(err => {
         console.log(err)
-    })
+    })*/
 }
