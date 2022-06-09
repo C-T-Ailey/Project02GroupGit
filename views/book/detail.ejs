@@ -1,6 +1,14 @@
-<h2><%= book.title %></h2>
+<style>
+    * {
+        color: white;
+    }
+    h5 {
+        color: white;
+    }
+</style>
+<h2 style="color: white; margin-top: 5%"><%= book.title %></h2>
 
-Cover:
+<h5>Cover:</h5>
 <img src="<%= book.imageUrl %>" alt="<%= book.title %> cover">
 
 <% book.authors.forEach(function(author){ %>
@@ -26,11 +34,11 @@ Cover:
 <br>
 
 <div>
-<h3>What other Nomads have to say about this title...</h3>
+<h3>What other Nomads have to say about this title:</h3>
 </div>
 <br>
 
-<div>
-    <h3><%= book.reviewTitle%></h3>
-    <p><%= book.reviewBody %></p>
+<div style="font-style: italic; display: flex; justify-content: space-evenly;">
+    <div><h3 style="border: 1px solid rgba(255, 255, 255, 0.2); padding: 10px; margin-bottom: 0"><%= book.reviewTitle%></h3>
+    <p style="border: 1px solid rgba(255, 255, 255, 0.2); padding: 10px; margin-top: 0"><%= book.reviewBody %></p></div>
 </div>
