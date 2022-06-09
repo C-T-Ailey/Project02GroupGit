@@ -31,12 +31,16 @@
         </td>
         <td><%= moment(author.createdAt).fromNow() %></td>
         <td><%= moment(author.updatedAt).fromNow() %></td>
-        <% if (currentUser) { %>
-            <% if (currentUser.id == author.createdBy) { %>
-        <td><a href="/author/edit?id=<%= author.id %>" style="color: yellow">Edit</a></td>
-        <td><a href="/author/delete?id=<%= author.id %>" style="color: red">Delete</a></td>
+        <% if (currentUser && currentUser.id == author.createdBy) { %>
+            <td><a href="/author/edit?id=<%= author.id %>" style="color: yellow">Edit</a></td>
+            <td><a href="/author/delete?id=<%= author.id %>" style="color: red">Delete</a></td>
+        <% } else if (!currentUser) { %>
+            <td><a href="/auth/login">Edit</a></td>
+            <td><a href="/auth/login">Delete</a></td>
+            <% } else if (currentUser.id != author.createdBy) { %>
+            <td>Edit</td>
+            <td>Delete</td>
             <% } %>
-        <% } %>
     </tr>
 <% }) %>
 </table>
