@@ -1,7 +1,7 @@
 # Project 2: Bookshelf App
 ## The Nomad Bookshelf
 
-### ERD and Wireframes
+### ERD and Wireframes
 * [ERD](https://imgur.com/a/0NvnsTk)
 * [Wireframes](https://imgur.com/a/pw1E0D4)
 
