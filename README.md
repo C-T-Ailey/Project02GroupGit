@@ -2,8 +2,8 @@
 ## The Nomad Bookshelf
 
 ### ERD and Wireframes
-* [ERD]()
-* [Wireframes]()
+* [ERD](https://imgur.com/a/0NvnsTk)
+* [Wireframes](https://imgur.com/a/pw1E0D4)
 
 ### Deployed Application
 * [The Nomad Bookshelf](https://nomadbooks.herokuapp.com/)
