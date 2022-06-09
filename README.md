@@ -8,7 +8,7 @@
 ### Deployed Application
 * [The Nomad Bookshelf](https://nomadbooks.herokuapp.com/)
 
-### Unsolved Issues
+### Unresolved Issues
 * Profile updating and password change systems are non-functional.
 * The select box in the /author/edit form only displays the authors already attributed to that book, instead of the full list.
 
