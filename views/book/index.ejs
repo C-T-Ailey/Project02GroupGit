@@ -26,6 +26,7 @@
         <td><%= book.yearPublished %></td>
         <td><%= moment(book.createdAt).fromNow() %></td>
         <td><%= moment(book.updatedAt).fromNow() %></td>
+
         <% if (currentUser && currentUser.id == book.createdBy) { %>
             <td><a href="/book/edit?id=<%= book.id %>" style="color: yellow">Edit</a></td>
             <td><a href="/book/delete?id=<%= book.id %>" style="color: red">Delete</a></td>
