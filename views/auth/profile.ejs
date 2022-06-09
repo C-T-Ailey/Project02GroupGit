@@ -1,18 +1,24 @@
+<style>
+    * {
+        color: white;
+    }
+</style>
+
 <div>
-    <h2><%= currentUser.firstName %>'s Profile</h2>
+    <h1 style="margin-top: 40%"><%= currentUser.firstName %>'s Profile</h1>
 </div>
 
 <div>
-    Name: <%= currentUser.firstName + " " + currentUser.lastName %>
+    <i>Name:</i> <strong><%= currentUser.firstName + " " + currentUser.lastName %></strong>
     <br>
 </div>
 
 <div>
-    Registered Email Address: <%= currentUser.emailAddress %>
+   <i> Registered Email Address:</i><strong> <%= currentUser.emailAddress %></strong>
     <br>
 </div>
 
 <div>
-    <a href="/auth/edit">Update Profile</a>
+    <a href="/auth/edit" style="font-size:20px; font-weight: bolder; font-style: italic; text-decoration: underline">Update Profile</a>
     <br>
 </div>
