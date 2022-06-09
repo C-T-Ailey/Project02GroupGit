@@ -68,6 +68,7 @@ nav {
     animation: flash 0.9s infinite;
     padding-bottom: 90px;
     padding-right: 25px;
+    margin-top: 10px;
 }
 
 @keyframes flash {
