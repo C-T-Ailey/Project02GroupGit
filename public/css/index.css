@@ -41,3 +41,8 @@ a {
     width: 250px;
     height: 375px;
 }
+
+.bookPreview h3 {
+    inline-size: 250px;
+    overflow-wrap: break-word;
+}
