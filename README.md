@@ -133,7 +133,7 @@ With this being completed, the one remaining incomplete feature was the Profile 
 
 The `isLoggedIn` middleware was the one of the first pieces of code implemented into the project after the bones of the application had been put together. Although it’s a short and straightforward piece of code which simply checks to see if a given request has a valid User model attached and redirects the user to the login page instead of their intended destination if not, it served as an integral element of the project and was employed extensively.
 
-```
+```js
 module.exports = (req, res, next) => {
     if(!req.user)
     {
@@ -149,7 +149,7 @@ module.exports = (req, res, next) => {
 
 The second major point of pride during development was implementing the conditional view for the landing page. Our plan was to have it so that users who are not logged in will only see a distinct prompt to either signup or login upon first visiting the site; those who are logged in will see a display of “recently added” books, arranged by cover image and title. Though relatively simple to create in hindsight, it was a landmark moment in the development process due to being my first piece of functionality with the feeling of an “above and beyond” flourish.
 
-```
+```html
 <div>  
     <% if(currentUser) { %>
         <h1 style="color: white; text-align: center; margin-bottom: 0; margin-top: 50px"> Recently Added </h1>
@@ -185,7 +185,7 @@ The second major point of pride during development was implementing the conditio
 
 The eleventh-hour success of completing the Password Update feature was a real triumph, as I had feared I wouldn’t be able to complete this particular requirement with the little time remaining after everything else had been finished. In its completed state, this code functions perfectly for its purpose of allowing a logged-in user to change their password within their profile. It operates by using bcrypt to compare the user’s current password as submitted via the “Change Password” form to the decryption of the one stored in that user’s database entry, notifying the user if it doesn’t match, and otherwise progressing to checking whether their chosen new password matches the one entered in the Confirm New Password field. On success, the user will be notified that their password has been updated and redirected to their Profile page.
 
-```
+```js
 exports.auth_updatePW_put = (req, res, next) => {
     var user = req.user;
     if (!bcrypt.compareSync(req.body.password, user.password)){
